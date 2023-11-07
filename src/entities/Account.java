@@ -14,6 +14,7 @@ public class Account {
         deposit(initialDeposit);
     }
     public Account(int numberAccount, String name){
+        this.name = name;
         this.numberAccount = numberAccount;
     }
 
