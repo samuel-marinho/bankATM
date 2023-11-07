@@ -13,18 +13,18 @@ public class Program {
         System.out.println("Enter account number: ");
         int numberAccount = sc.nextInt();
         System.out.println("Enter account holder: ");
-        String name = sc.nextLine();
         sc.nextLine();
+        String name = sc.nextLine();
         System.out.println("Is there an initial deposit? [Y/N] ");
         char answer = sc.next().charAt(0);
 
         Account account;
         if (answer == 'Y'){
             System.out.println("Enter initial deposit value: ");
-            double deposit = sc.nextDouble();
-            account = new Account(name, numberAccount, deposit);
+            double initialDeposit = sc.nextDouble();
+            account = new Account(numberAccount, name, initialDeposit);
         }else {
-            account = new Account (name, numberAccount);
+            account = new Account(numberAccount, name);
         }
         System.out.println();
         System.out.println("Account data:");
